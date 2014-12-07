@@ -1,0 +1,48 @@
+2014-12-06 21:28:30.273 PokerPlanning[21246:2196991] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/8AA3D4DB-8C0A-4265-A64A-C615E1419DC6/Library/Cookies/Cookies.binarycookies
+2014-12-06 21:28:30.669 PokerPlanning[21246:2196991] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-06 21:28:30.670 PokerPlanning[21246:2196991] Multi-tasking -> Device: YES, App: YES
+2014-12-06 21:28:30.690 PokerPlanning[21246:2196991] Unlimited access to network resources
+2014-12-06 21:28:30.707 PokerPlanning[21246:2196991] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-06 21:28:32.319 PokerPlanning[21246:2196991] Resetting plugins due to page load.
+2014-12-06 21:28:32.428 PokerPlanning[21246:2196991] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/E1EA47B8-728E-4A49-B720-D0668AA461BA/PokerPlanning.app/www/index.html
+2014-12-06 22:47:02.991 PokerPlanning[21513:2213922] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/B7167EF7-9CB3-4947-A80A-1037E929EC3C/Library/Cookies/Cookies.binarycookies
+2014-12-06 22:47:03.178 PokerPlanning[21513:2213922] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-06 22:47:03.180 PokerPlanning[21513:2213922] Multi-tasking -> Device: YES, App: YES
+2014-12-06 22:47:03.186 PokerPlanning[21513:2213922] Unlimited access to network resources
+2014-12-06 22:47:03.190 PokerPlanning[21513:2213922] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-06 22:47:03.984 PokerPlanning[21513:2213922] Resetting plugins due to page load.
+2014-12-06 22:47:04.096 PokerPlanning[21513:2213922] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/FBA81A0D-E571-468D-931F-BD885525E3B1/PokerPlanning.app/www/index.html
+2014-12-06 22:49:30.546 PokerPlanning[21513:2213922] Resetting plugins due to page load.
+2014-12-06 22:49:30.564 PokerPlanning[21513:2213922] Failed to load webpage with error: Frame load interrupted
+2014-12-06 22:49:33.564 PokerPlanning[21513:2213922] Resetting plugins due to page load.
+2014-12-06 22:49:33.568 PokerPlanning[21513:2213922] Failed to load webpage with error: Frame load interrupted
+2014-12-06 22:49:38.295 PokerPlanning[21513:2213922] Resetting plugins due to page load.
+2014-12-06 22:49:38.298 PokerPlanning[21513:2213922] Failed to load webpage with error: Frame load interrupted
+2014-12-06 22:49:58.713 PokerPlanning[21616:2214979] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/EF1E75E3-5F12-4382-AE6E-2EE50DB681B2/Library/Cookies/Cookies.binarycookies
+2014-12-06 22:49:58.828 PokerPlanning[21616:2214979] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-06 22:49:58.828 PokerPlanning[21616:2214979] Multi-tasking -> Device: YES, App: YES
+2014-12-06 22:49:58.830 PokerPlanning[21616:2214979] Unlimited access to network resources
+2014-12-06 22:49:58.833 PokerPlanning[21616:2214979] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-06 22:49:59.256 PokerPlanning[21616:2214979] Resetting plugins due to page load.
+2014-12-06 22:49:59.309 PokerPlanning[21616:2214979] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/9E4FA33A-2D8A-40F5-A442-3E7B5F4266D5/PokerPlanning.app/www/index.html
