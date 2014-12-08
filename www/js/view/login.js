@@ -1,7 +1,6 @@
 define(
     [
     'jquery',
-    'underscore',
     'backbone',
     'handlebars',
 	'view/welcome',
@@ -9,21 +8,28 @@ define(
     'text!templates/home/login.html'
     ], 
     
-    function($, _, Backbone, Handlebars, WelcomeView, UserService, loginViewTemplate) {
+    function($, Backbone, Handlebars, WelcomeView, UserService, loginViewTemplate) {
     
         var LoginView = Backbone.View.extend({
             el: $('#container'),
 			
 			events: {
-				'click input#login': 'login'
+				'click #login': 'login',
 			},
 			
             template: Handlebars.compile(loginViewTemplate),
             
 			render: function() {
-                var data = {};
+                var data = { };
+				if (this.showWelcome) {
+					data.showWelcome = true;
+				}
 				this.$el.html(this.template(data));
             },
+			
+			showWelcomeMsg: function() {
+				this.showWelcome = true;
+			},
 	
 			login: function() {
 				$('div.error').html('');
@@ -47,6 +53,7 @@ define(
 					}
 				});
 			}
+			
         });
 
         return LoginView;

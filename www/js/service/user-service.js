@@ -20,8 +20,26 @@ define(
 				url: url,
 				data: { name: name, pass: pass },
 				type: 'POST',
-				dataType: 'jsonp',
 				success: function(data) {
+					callback(data);
+				}
+			});
+		}
+		
+		UserService.createAccount = function(userData, callback) {
+			var url = Config.dbhost + '/signup';
+			var data = {
+				fname: userData.fname,
+				lname: userData.lname,
+				username: userData.username,
+				email: userData.email,
+				pass: userData.pass				
+			};
+			$.ajax({
+				url: url,
+				data: data,
+				type: 'POST',
+				success: function(data){
 					callback(data);
 				}
 			});

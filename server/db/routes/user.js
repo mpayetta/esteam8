@@ -22,7 +22,7 @@ exports.findById = function(req, res) {
 	console.log('findById: ' + id);
 	users.findOne({'id': id}, function(err, item) {
 		console.log(item);
-		res.jsonp(item);
+		res.json(item);
 	});
 	
 };
@@ -32,7 +32,7 @@ exports.findByName = function(req, res) {
 	console.log('findByName: ' + name);
 	users.find({'name': name}).toArray(function(err, items) {
 		console.log(items);
-		res.jsonp(items[0]);
+		res.json(items[0]);
 	});
 };
 
@@ -41,7 +41,7 @@ exports.findByEmail = function(req, res) {
 	console.log('findByEmail: ' + email);
 	users.find({'email': email}).toArray(function(err, items) {
 		console.log(items);
-		res.jsonp(items[0]);
+		res.json(items[0]);
 	});
 };
 
@@ -50,11 +50,11 @@ exports.findAll = function(req, res) {
 	var name = req.query["name"];
 	if (name) {
 		users.find({"name": new RegExp(name, "i")}).toArray(function(err, items) {
-			res.jsonp(items);
+			res.json(items);
 		});
 	} else {
 		users.find().toArray(function(err, items) {
-			res.jsonp(items);
+			res.json(items);
 		});
 	}
 };
@@ -65,17 +65,41 @@ exports.login = function(req, res) {
 	
 	users.find({ "name": name }).toArray(function(err, items) {
 		if (items.length === 0) {
-			res.jsonp({ error: 'user-not-found' });
+			res.json({ error: 'user-not-found' });
 		}
 		else {
 			var user = items[0];
 			password.validatePassword(pass, user.pass, function(err, result) {
 				if (result) {
-					res.jsonp(user);
+					res.json(user);
 				} else {					
-					res.jsonp({ error: 'invalid-password' });
+					res.json({ error: 'invalid-password' });
 				}
 			});
+		}
+	});
+};
+
+exports.signup = function(req, res) {
+	var fname = req.query["fname"],
+		lname = req.query["lname"],
+		username = req.query["username"],
+		email = req.query["email"],
+		pass = req.query["pass"];
+	
+	password.saltAndHash(pass, function(hashedPass){
+		var result = users.insert({
+			"name": username,
+			"pass": hashedPass,
+			"firstName": fname,
+			"lastName": lname,
+			"email": email
+		});
+		if (result.nInserted === 0) {
+			res.json({ error: 'could not insert in collection. error: ' + result.writeError.code + ' ' + result.writeError.errmsg });
+		}
+		else {
+			res.json('success');
 		}
 	});
 }
@@ -89,8 +113,8 @@ var populateDB = function() {
 		pass = hash;
 		console.log("Populating users database...");
 		var users = [
-			{"id": 1, "name": "mpayetta", "pass": pass, "firstName": "Mauricio", "lastName": "Payetta", "title": "Software Engineer", "department": 	"TTI", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "mauricio@fakemail.com", "city": "Berlin", "pic": "mauricio.jpg"},
-			{"id": 1, "name": "pkrootjes", "pass": pass, "firstName": "Peter", "lastName": "Krootjes", "title": "Product Owner", "department": "TTI", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "peter@fakemail.com", "city": "Amsterdam", "pic": "peter.jpg"},
+			{"name": "mpayetta", "pass": pass, "firstName": "Mauricio", "lastName": "Payetta", "title": "Software Engineer", "department": 	"TTI", "cellPhone": "617-000-0001", "officePhone": "781-000-0001", "email": "mauricio@fakemail.com", "city": "Berlin", "pic": "mauricio.jpg"},
+			{"name": "pkrootjes", "pass": pass, "firstName": "Peter", "lastName": "Krootjes", "title": "Product Owner", "department": "TTI", "cellPhone": "617-000-0002", "officePhone": "781-000-0002", "email": "peter@fakemail.com", "city": "Amsterdam", "pic": "peter.jpg"},
 		];
 
 		db.collection('users', function(err, collection) {

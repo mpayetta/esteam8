@@ -1,10 +1,14 @@
-<div class="card form-panel">
-    <h3>Login</h3>
+<div class="form-panel">
+	{{#if showWelcome}}
+		<h3>Your account was created, now you can login!</h3>
+	{{else}}
+    	<h3>Login please</h3>
+	{{/if}}
     <div class="body">
         <input type="text" id="name" placeholder="username" />
         <input type="password" id="pass" placeholder="password" />
-        <input type="button" id="login" value="Login" class="btn btn-block btn-primary" />
-		<input type="button" id="signup" value="Create account" class="btn btn-block" />
+		<a href="" id="login" class="btn btn-block btn-primary" >Login</a>
+		<a href="#/signup" id="goto-signup" class="btn btn-block" >Signup</a>
     </div>
 	<div class="error"></div>
 </div>

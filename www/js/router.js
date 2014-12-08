@@ -35,7 +35,7 @@ define([
 			var loginView = new LoginView();
 			loginView.render();
         });
-        
+        		
         Backbone.history.start();
     };
 
