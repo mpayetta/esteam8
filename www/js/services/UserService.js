@@ -39,7 +39,7 @@ UserService.createAccount = function(userData, callback) {
 	var data = {
 		fname: userData.fname,
 		lname: userData.lname,
-		username: userData.username,
+		name: userData.name,
 		email: userData.email,
 		pass: userData.pass				
 	};
