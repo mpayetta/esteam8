@@ -35,7 +35,7 @@ app.views.LoginView = Backbone.View.extend({
 				}
 			}
 			else {
-				$('div.msg').html('Success!');
+				app.router.navigate("/home", { trigger: true });
 			}
 		});
 

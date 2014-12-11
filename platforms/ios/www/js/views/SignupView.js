@@ -51,7 +51,7 @@ app.views.SignupView = Backbone.View.extend({
 							else {
 								$('div.wheel').removeClass('loading');
 								$('#create-acc-btn').removeAttr('disabled');
-								$('div.msg').html('Success!');
+								app.router.navigate("/login", { trigger: true });
 							}
 						});
 					}

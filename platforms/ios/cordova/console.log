@@ -60,3 +60,43 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 
 2014-12-08 19:53:57.731 PokerPlanning[25087:2505434] Resetting plugins due to page load.
 2014-12-08 19:53:57.892 PokerPlanning[25087:2505434] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/6FF860D8-1917-45B8-9A3F-952BDC55A8A2/PokerPlanning.app/www/index.html
+2014-12-11 22:31:22.320 PokerPlanning[1498:50923] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/B7C7346A-564B-46D7-B0AE-753B54B26327/Library/Cookies/Cookies.binarycookies
+2014-12-11 22:31:22.610 PokerPlanning[1498:50923] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-11 22:31:22.610 PokerPlanning[1498:50923] Multi-tasking -> Device: YES, App: YES
+2014-12-11 22:31:22.628 PokerPlanning[1498:50923] Unlimited access to network resources
+2014-12-11 22:31:22.641 PokerPlanning[1498:50923] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-11 22:31:23.477 PokerPlanning[1498:50923] Resetting plugins due to page load.
+2014-12-11 22:31:23.814 PokerPlanning[1498:50923] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/987BD5EC-48D2-4B65-96FD-8D03BA8C08CE/PokerPlanning.app/www/index.html
+2014-12-11 22:31:57.795 PokerPlanning[1498:50923] -[UIWebView cut:]: unrecognized selector sent to instance 0x7ae8a010
+2014-12-11 22:31:57.840 PokerPlanning[1498:50923] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '-[UIWebView cut:]: unrecognized selector sent to instance 0x7ae8a010'
+*** First throw call stack:
+(
+	0   CoreFoundation                      0x0026a946 __exceptionPreprocess + 182
+	1   libobjc.A.dylib                     0x0277fa97 objc_exception_throw + 44
+	2   CoreFoundation                      0x002725c5 -[NSObject(NSObject) doesNotRecognizeSelector:] + 277
+	3   CoreFoundation                      0x001bb3e7 ___forwarding___ + 1047
+	4   CoreFoundation                      0x001bafae _CF_forwarding_prep_0 + 14
+	5   libobjc.A.dylib                     0x02795771 -[NSObject performSelector:withObject:] + 70
+	6   UIKit                               0x00aaac33 -[UICalloutBar buttonPressed:] + 355
+	7   libobjc.A.dylib                     0x02795771 -[NSObject performSelector:withObject:] + 70
+	8   UIKit                               0x00aa939a -[UICalloutBarButton fadeAndSendAction] + 91
+	9   Foundation                          0x02382b57 __NSFireDelayedPerform + 423
+	10  CoreFoundation                      0x001c48d6 __CFRUNLOOP_IS_CALLING_OUT_TO_A_TIMER_CALLBACK_FUNCTION__ + 22
+	11  CoreFoundation                      0x001c425d __CFRunLoopDoTimer + 1309
+	12  CoreFoundation                      0x001836ba __CFRunLoopRun + 2090
+	13  CoreFoundation                      0x00182bcb CFRunLoopRunSpecific + 443
+	14  CoreFoundation                      0x001829fb CFRunLoopRunInMode + 123
+	15  GraphicsServices                    0x03de824f GSEventRunModal + 192
+	16  GraphicsServices                    0x03de808c GSEventRun + 104
+	17  UIKit                               0x0061d8b6 UIApplicationMain + 1526
+	18  PokerPlanning                       0x0006ff8c main + 92
+	19  libdyld.dylib                       0x02e55ac9 start + 1
+)
+libc++abi.dylib: terminating with uncaught exception of type NSException
