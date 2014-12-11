@@ -31,8 +31,12 @@ exports.findByName = function(req, res) {
 	var name = req.params.name;
 	console.log('findByName: ' + name);
 	users.find({'name': name}).toArray(function(err, items) {
-		console.log(items);
-		res.json(items[0]);
+		if (items.length > 0) {
+			res.json(items[0]);
+		}
+		else {
+			res.send(null);
+		}
 	});
 };
 
@@ -40,8 +44,12 @@ exports.findByEmail = function(req, res) {
 	var email = req.params.email;
 	console.log('findByEmail: ' + email);
 	users.find({'email': email}).toArray(function(err, items) {
-		console.log(items);
-		res.json(items[0]);
+		if (items.length > 0) {
+			res.json(items[0]);
+		}
+		else {
+			res.send(null);
+		}
 	});
 };
 
@@ -60,15 +68,16 @@ exports.findAll = function(req, res) {
 };
 
 exports.login = function(req, res) {
-	var name = req.query["name"];
-	var pass = req.query["pass"];
-	
+	var name = req.body['name'];
+	var pass = req.body['pass'];
+	console.log('login: ' + name + '   ' + pass);
 	users.find({ "name": name }).toArray(function(err, items) {
 		if (items.length === 0) {
 			res.json({ error: 'user-not-found' });
 		}
 		else {
 			var user = items[0];
+			console.log(user.pass + '    ' + pass);
 			password.validatePassword(pass, user.pass, function(err, result) {
 				if (result) {
 					res.json(user);
@@ -81,11 +90,11 @@ exports.login = function(req, res) {
 };
 
 exports.signup = function(req, res) {
-	var fname = req.query["fname"],
-		lname = req.query["lname"],
-		username = req.query["username"],
-		email = req.query["email"],
-		pass = req.query["pass"];
+	var fname = req.body["fname"],
+		lname = req.body["lname"],
+		username = req.body["name"],
+		email = req.body["email"],
+		pass = req.body["pass"];
 	
 	password.saltAndHash(pass, function(hashedPass){
 		var result = users.insert({
@@ -94,13 +103,15 @@ exports.signup = function(req, res) {
 			"firstName": fname,
 			"lastName": lname,
 			"email": email
+		}, function(err, inserted){
+			if (err) {
+				res.json({ error: 'could not insert in collection. error: ' + err });
+			}
+			else {
+				res.json('success');
+			}
 		});
-		if (result.nInserted === 0) {
-			res.json({ error: 'could not insert in collection. error: ' + result.writeError.code + ' ' + result.writeError.errmsg });
-		}
-		else {
-			res.json('success');
-		}
+		
 	});
 }
 

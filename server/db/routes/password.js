@@ -20,7 +20,8 @@ var md5 = function(str) {
 
 var saltAndHash = function(pass, callback) {
 	var salt = generateSalt();
-	callback(salt + md5(pass + salt));
+	var hash = md5(pass + salt);
+	callback(salt + hash);
 }
 
 var validatePassword = function(plainPass, hashedPass, callback) {

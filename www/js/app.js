@@ -1,15 +1,17 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'router', // Request router.js
-], function($, _, Backbone, Router){
-    var initialize = function(){
-        // Pass in our Router module and call it's initialize function
-        Router.initialize();
-    }
+var app = {
+    views: {},
+    models: {},
+    routers: {},
+    utils: {},
+    services: {},
+	config: {}
+};
 
-    return {
-        initialize: initialize
-    };
+$(document).on("ready", function () {
+    app.router = new app.routers.AppRouter();
+    app.utils.templates.load(["LoginView", "SignupView", "HomeView" ],
+        function () {
+            app.router = new app.routers.AppRouter();
+            Backbone.history.start();
+	});
 });

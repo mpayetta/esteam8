@@ -1,3 +1,1 @@
-define({
-	dbhost: 'http://127.0.0.1:3000'
-});
+app.config.dbhost = 'http://127.0.0.1:3000'
