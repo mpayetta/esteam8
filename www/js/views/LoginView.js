@@ -1,4 +1,4 @@
-app.views.LoginView = Backbone.View.extend({
+app.views.LoginView = app.Extensions.View.extend({
 
 	initialize: function () {
 
@@ -6,7 +6,7 @@ app.views.LoginView = Backbone.View.extend({
 
 	render: function () {
 		this.$el.html(this.template());
-		return this;
+		return app.Extensions.View.prototype.render.apply(this, arguments);
 	},
 
 	events: {

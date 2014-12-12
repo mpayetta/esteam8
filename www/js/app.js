@@ -1,17 +1,21 @@
 var app = {
-    views: {},
-    models: {},
-    routers: {},
-    utils: {},
-    services: {},
-	config: {}
+	views : {},
+	models : {},
+	routers : {},
+	utils : {},
+	services : {},
+	config : {},
+	Extensions: {}
 };
 
-$(document).on("ready", function () {
-    app.router = new app.routers.AppRouter();
-    app.utils.templates.load(["LoginView", "SignupView", "HomeView" ],
-        function () {
-            app.router = new app.routers.AppRouter();
-            Backbone.history.start();
-	});
+$(document).on("ready", function() {
+	app.router = new app.routers.AppRouter();
+	app.utils.templates.load(
+		[ "LoginView", "SignupView", "HomeView" ], 
+		function() {
+			app.router = new app.routers.AppRouter();
+			app.instance = new app.views.App();
+			Backbone.history.start();
+		}
+	);
 });
