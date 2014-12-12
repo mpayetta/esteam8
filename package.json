@@ -1,0 +1,24 @@
+{
+	"name": "esteam8",
+	"version": "0.1.0",
+	"description": "A mobile poker planning app",
+	"author": "Mauricio Payetta <mpayetta@gmail.com>",
+
+	"bin": {},
+	
+	"scripts": {},
+	
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mpayetta/esteam8.git"
+	},
+	
+	"dependencies": {
+		"express": "4.x",
+		"body-parser": "1.x",
+		"mongodb": "1.4.x",
+		"crypto": "*",
+		"socket.io": "1.2.x",
+		"node-uuid": "1.4.x"
+	}
+}
