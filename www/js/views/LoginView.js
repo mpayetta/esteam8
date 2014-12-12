@@ -1,7 +1,6 @@
 app.views.LoginView = app.Extensions.View.extend({
 
-	initialize: function () {
-
+	initialize: function (options) {
 	},
 
 	render: function () {
@@ -35,7 +34,7 @@ app.views.LoginView = app.Extensions.View.extend({
 				}
 			}
 			else {
-				$('div.msg').html('Success!');
+				app.router.navigate("/welcome/" + data._id, { trigger: true, user: data });
 			}
 		});
 

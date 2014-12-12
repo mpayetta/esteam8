@@ -1,9 +1,10 @@
 app.routers.AppRouter = Backbone.Router.extend({
 	
     routes: {
-        "":                         "home",
-        "login":                    "login",
-        "signup":                   "signup"
+        "":         "home",
+        "login":    "login",
+        "signup":   "signup",
+        "welcome/:userId":	"welcome"
     },
 
     initialize: function () {
@@ -22,6 +23,11 @@ app.routers.AppRouter = Backbone.Router.extend({
     signup: function() {
         var signupView = new app.views.SignupView();
         app.instance.goTo(signupView);
+    },
+    
+    welcome: function(userId) {
+    	var welcomeView = new app.views.WelcomeView({ userId: userId });
+    	app.instance.goTo(welcomeView);
     }
 
 });

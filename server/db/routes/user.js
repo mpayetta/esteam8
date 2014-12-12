@@ -1,5 +1,6 @@
 var MongoClient = require('mongodb').MongoClient,
 	Server = require('mongodb').Server,
+	ObjectId = require('mongodb').ObjectID,
 	password = require('./password'),
 	db,
 	users;
@@ -17,12 +18,10 @@ mongoClient.open(function(err, mongoClient) {
 });
 
 exports.findById = function(req, res) {
-	console.log(req.params);
-	var id = parseInt(req.params.id);
+	var id = req.params.id;
 	console.log('findById: ' + id);
-	users.findOne({'id': id}, function(err, item) {
-		console.log(item);
-		res.json(item);
+	users.findOne({'_id': new ObjectId(id)}, function(err, item) {
+		res.send(item);
 	});
 	
 };

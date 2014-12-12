@@ -11,7 +11,7 @@ var app = {
 $(document).on("ready", function() {
 	app.router = new app.routers.AppRouter();
 	app.utils.templates.load(
-		[ "LoginView", "SignupView", "HomeView" ], 
+		[ "LoginView", "SignupView", "HomeView", "WelcomeView" ], 
 		function() {
 			app.router = new app.routers.AppRouter();
 			app.instance = new app.views.App();
