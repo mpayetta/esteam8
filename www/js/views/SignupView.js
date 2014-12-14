@@ -14,6 +14,16 @@ app.views.SignupView = app.Extensions.View.extend({
 		"click #go-login-btn":       "goToLogin",
 		"click #go-home":            "home"
 	},
+	
+	toggleLoading: function() {
+		$('div.wheel').toggleClass('loading');
+		if ($('#login-btn').attr('disabled')) {
+			$('#login-btn').removeAttr('disabled');
+		}
+		else {
+			$('#login-btn').attr('disabled', true);
+		}
+	},
 
 	createAccount: function (event) {
 		var userData = {
@@ -24,44 +34,43 @@ app.views.SignupView = app.Extensions.View.extend({
 			pass: $('input#pass').val()
 		};
 		var userService = app.services.UserService;
-
+		var view = this;
 
 		$('div.msg').html('');
-		$('div.wheel').addClass('loading');
-		$('#create-acc-btn').attr('disabled', true);
-
-		userService.findByName(userData.name, function(data){
+		this.toggleLoading();
+		
+		var namePromise = userService.findByName(userData.name);
+		namePromise.done(function(data) {
 			if (data) {
+				view.toggleLoading();
 				$('div.msg').html('The username is already being used');
 			}
 			else {
-				userService.findByEmail(userData.email, function(data){
+				var emailPromise = userService.findByEmail(userData.email);
+				emailPromise.done(function(data){
 					if (data) {
-						$('div.wheel').removeClass('loading');
-						$('#create-acc-btn').removeAttr('disabled');
+						view.toggleLoading();
 						$('div.msg').html('The email is already being used');
 					}
 					else {
-						userService.createAccount(userData, function(data) {
-							if (data.error) {
-								$('div.wheel').removeClass('loading');
-								$('#create-acc-btn').removeAttr('disabled');
-								$('div.msg').html('There was an error while creating your account, please try again');
-							}
-							else {
-								$('div.wheel').removeClass('loading');
-								$('#create-acc-btn').removeAttr('disabled');
-								$('div.msg').html('Success!');
-							}
+						var createAccPromise = userService.createAccount(userData);
+						createAccPromise.done(function(data){
+							view.toggleLoading();
+							view.goToLogin();
+						});
+						
+						createAccPromise.fail(function(error) {
+							view.toggleLoading();
+							$('div.msg').html('There was an error while creating your account, please try again');
 						});
 					}
-				});
+				})
 			}
 		});
 	},
 
 	goToLogin: function (event) {
-		app.router.navigate("", { trigger: true });
+		app.router.navigate("/login", { trigger: true });
 	},
 
 	home: function (event) {

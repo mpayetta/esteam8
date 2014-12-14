@@ -1,13 +1,16 @@
 app.routers.AppRouter = Backbone.Router.extend({
 	
     routes: {
-        "":         "home",
-        "login":    "login",
-        "signup":   "signup",
-        "welcome/:userId":	"welcome"
+        "":         			"home",
+        "login":    			"login",
+        "signup":   			"signup",
+        "welcome/:userId":		"welcome",
+        "createTeam/:userId":	"createTeam",
+        "showTeam/:teamId":		"showTeam"
     },
 
     initialize: function () {
+    	
     },
 	
 	home: function () {
@@ -26,8 +29,33 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
     
     welcome: function(userId) {
-    	var welcomeView = new app.views.WelcomeView({ userId: userId });
-    	app.instance.goTo(welcomeView);
+    	var user = new app.models.User({id: userId});
+    	user.fetch({
+    		success: function() {
+    			var myTeamsView = new app.views.MyTeamsView({ user: user });
+    			app.instance.goTo(myTeamsView);
+    		}
+    	});
+    },
+    
+    createTeam: function(userId) {
+    	var user = new app.models.User({id: userId});
+    	user.fetch({
+    		success: function() {
+    			var createTeamView = new app.views.CreateTeamView({ user: user });
+        		app.instance.goTo(createTeamView);
+    		}
+    	});
+    },
+    
+    showTeam: function(teamId) {
+    	var team = new app.models.Team({id: teamId});
+    	team.fetch({
+    		success: function() {
+    			var showTeamView = new app.views.TeamView({ team: team });
+        		app.instance.goTo(showTeamView);
+    		}
+    	});
     }
 
 });

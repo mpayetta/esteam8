@@ -1,0 +1,31 @@
+<header class="bar bar-nav colored-bar">
+    <a href="#" id="go-back" class="pull-left inverse">
+        <span class="icon icon-left"></span>
+    </a>
+    <h1 class="title">Create a Team</h1>
+</header>
+
+<div class="content"> 
+	<form>
+  		<input id="name" type="text" placeholder="Team Name"/>
+  		<div class="cb-centered">
+  			<input id="own" type="checkbox"/>
+  			<div>I will be the team owner</div>
+  		</div>
+	</form>
+
+    <input type="button" id="create-team-btn" class="btn btn-primary btn-block" value="Create Team" />
+	<div class="msg"></div>
+	<div class="wheel"></div>
+</div>
+
+<div id="tabs"></div>
+
+<script type="text/javascript">
+$(function(){
+	$('#tabs').load('tpl/TabBar.html', function(){
+		$('.tabs-bar a').removeClass('active');
+		$('.tabs-bar a.my-teams').addClass('active');
+	});
+});
+</script>

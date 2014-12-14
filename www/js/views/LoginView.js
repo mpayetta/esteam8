@@ -13,31 +13,41 @@ app.views.LoginView = app.Extensions.View.extend({
 		"click #signup-btn":    "signup",
 		"click #go-home":       "home"
 	},
+	
+	toggleLoading: function() {
+		$('div.wheel').toggleClass('loading');
+		if ($('#login-btn').attr('disabled')) {
+			$('#login-btn').removeAttr('disabled');
+		}
+		else {
+			$('#login-btn').attr('disabled', true);
+		}
+	},
 
 	login: function (event) {
 		var name = $('input#name').val(),
 			pass = $('input#pass').val();
+		var view = this;
 		
 		$('div.msg').html('');
-		$('div.wheel').addClass('loading');
-		$('#login-btn').attr('disabled', true);
+		this.toggleLoading();
 		
-		app.services.UserService.login(name, pass, function(data){
-			$('div.wheel').removeClass('loading');
-			$('#login-btn').removeAttr('disabled');
-			if (data.error) {
-				if (data.error === 'user-not-found') {
-					$('div.msg').html('The username does not exist');
-				}
-				else if (data.error === 'invalid-password') {
-					$('div.msg').html('The password is incorrect');
-				}
+		var loginPromise = app.services.UserService.login(name, pass);
+		
+		loginPromise.done(function(data){
+			view.toggleLoading();
+			app.router.navigate("/welcome/" + data._id, { trigger: true });
+		});
+		
+		loginPromise.fail(function(error){
+			view.toggleLoading();
+			if (error === 'user-not-found') {
+				$('div.msg').html('The username does not exist');
 			}
-			else {
-				app.router.navigate("/welcome/" + data._id, { trigger: true, user: data });
+			else if (error === 'invalid-password') {
+				$('div.msg').html('The password is incorrect');
 			}
 		});
-
 	},
 
 	signup: function (event) {

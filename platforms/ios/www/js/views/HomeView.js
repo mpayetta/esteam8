@@ -1,8 +1,8 @@
-app.views.HomeView = Backbone.View.extend({
+app.views.HomeView = app.Extensions.View.extend({
 
     render: function () {
         this.$el.html(this.template());
-        return this;
+        return app.Extensions.View.prototype.render.apply(this, arguments);
     },
 
     events: {
@@ -11,7 +11,7 @@ app.views.HomeView = Backbone.View.extend({
     },
 
     goLogin: function (event) {
-        app.router.navigate("/login", { trigger: true });
+    	app.router.navigate("/login", { trigger: true });
     },
 
     goSignup: function (event) {

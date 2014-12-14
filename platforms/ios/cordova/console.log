@@ -100,3 +100,273 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 	19  libdyld.dylib                       0x02e55ac9 start + 1
 )
 libc++abi.dylib: terminating with uncaught exception of type NSException
+2014-12-12 19:28:21.355 PokerPlanning[5258:103747] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/EF6FBAE7-35EC-4755-826D-EC27F061A5C9/Library/Cookies/Cookies.binarycookies
+2014-12-12 19:28:21.619 PokerPlanning[5258:103747] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-12 19:28:21.620 PokerPlanning[5258:103747] Multi-tasking -> Device: YES, App: YES
+2014-12-12 19:28:21.639 PokerPlanning[5258:103747] Unlimited access to network resources
+2014-12-12 19:28:21.648 PokerPlanning[5258:103747] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-12 19:28:22.408 PokerPlanning[5258:103747] Resetting plugins due to page load.
+2014-12-12 19:28:22.618 PokerPlanning[5258:103747] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/F8F925A5-F2AE-4E48-98E5-741C6DF57542/PokerPlanning.app/www/index.html
+2014-12-13 19:28:44.094 Esteam8[8478:306921] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/7743C53A-4E15-479F-9B1D-CA363624EC43/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:28:44.511 Esteam8[8478:306921] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:28:44.512 Esteam8[8478:306921] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:28:44.537 Esteam8[8478:306921] Unlimited access to network resources
+2014-12-13 19:28:44.556 Esteam8[8478:306921] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:28:45.873 Esteam8[8478:306921] Resetting plugins due to page load.
+2014-12-13 19:28:46.320 Esteam8[8478:306921] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/2005FBEA-6A95-4E21-8A67-9874BC09B171/Esteam8.app/www/index.html
+2014-12-13 19:38:15.512 Esteam8[8478:310457] Terminating since there is no system app.
+2014-12-13 19:38:36.774 Esteam8[8722:311384] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/82DFD688-4AED-473E-99A8-8D8865C1CB29/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:38:36.914 Esteam8[8722:311384] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:38:36.915 Esteam8[8722:311384] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:38:36.918 Esteam8[8722:311384] Unlimited access to network resources
+2014-12-13 19:38:36.924 Esteam8[8722:311384] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:38:37.483 Esteam8[8722:311384] Resetting plugins due to page load.
+2014-12-13 19:38:37.695 Esteam8[8722:311384] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/1706A8CF-3696-42CA-A975-B88ECC32F9E7/Esteam8.app/www/index.html
+2014-12-13 19:39:28.950 Esteam8[9078:312858] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/FF2663C4-9FC3-4A87-BC4A-E014EFBC4ABE/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:39:29.047 Esteam8[9078:312858] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:39:29.048 Esteam8[9078:312858] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:39:29.049 Esteam8[9078:312858] Unlimited access to network resources
+2014-12-13 19:39:29.052 Esteam8[9078:312858] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:39:29.418 Esteam8[9078:312858] Resetting plugins due to page load.
+2014-12-13 19:39:29.540 Esteam8[9078:312858] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/A791A4B8-10A9-4021-B1E1-0A44DECC030D/Esteam8.app/www/index.html
+2014-12-13 19:40:48.868 Esteam8[9432:314232] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/D75D3F4D-1195-4C2D-A7BB-A676F672D69D/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:40:49.010 Esteam8[9432:314232] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:40:49.010 Esteam8[9432:314232] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:40:49.012 Esteam8[9432:314232] Unlimited access to network resources
+2014-12-13 19:40:49.016 Esteam8[9432:314232] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:40:49.301 Esteam8[9432:314232] Resetting plugins due to page load.
+2014-12-13 19:40:49.490 Esteam8[9432:314232] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/BBB89CB8-27A3-4481-8D87-6098DE75FBD8/Esteam8.app/www/index.html
+2014-12-13 19:48:57.745 Esteam8[9790:317724] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/3E9D7C6D-5DDF-4CC9-9751-DB7B5B68D4D4/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:48:57.900 Esteam8[9790:317724] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:48:57.901 Esteam8[9790:317724] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:48:57.904 Esteam8[9790:317724] Unlimited access to network resources
+2014-12-13 19:48:57.910 Esteam8[9790:317724] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:48:58.244 Esteam8[9790:317724] [CDVTimer][statusbar] 78.985989ms
+2014-12-13 19:48:58.244 Esteam8[9790:317724] [CDVTimer][TotalPluginStartup] 79.171002ms
+2014-12-13 19:48:58.388 Esteam8[9790:317724] Resetting plugins due to page load.
+2014-12-13 19:48:58.520 Esteam8[9790:317724] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/4F62D242-2181-4436-B1F6-4EEA887520FC/Esteam8.app/www/index.html
+2014-12-13 19:52:06.729 Esteam8[9964:319050] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/CFC90A11-9212-4C25-A3F3-ED34BEEF168E/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:52:06.840 Esteam8[9964:319050] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:52:06.841 Esteam8[9964:319050] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:52:06.842 Esteam8[9964:319050] Unlimited access to network resources
+2014-12-13 19:52:06.845 Esteam8[9964:319050] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:52:07.125 Esteam8[9964:319050] [CDVTimer][statusbar] 66.645026ms
+2014-12-13 19:52:07.125 Esteam8[9964:319050] [CDVTimer][TotalPluginStartup] 66.829026ms
+2014-12-13 19:52:07.308 Esteam8[9964:319050] Resetting plugins due to page load.
+2014-12-13 19:52:07.448 Esteam8[9964:319050] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/EC24B670-F06E-4512-8B73-4CE136D28CD3/Esteam8.app/www/index.html
+2014-12-13 19:52:50.415 Esteam8[10281:319774] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/2B88D80C-DEF1-45FD-A7FD-D79FE347E989/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:52:50.551 Esteam8[10281:319774] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:52:50.552 Esteam8[10281:319774] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:52:50.554 Esteam8[10281:319774] Unlimited access to network resources
+2014-12-13 19:52:50.558 Esteam8[10281:319774] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:52:50.909 Esteam8[10281:319774] [CDVTimer][statusbar] 76.806009ms
+2014-12-13 19:52:50.909 Esteam8[10281:319774] [CDVTimer][TotalPluginStartup] 77.096999ms
+2014-12-13 19:52:51.036 Esteam8[10281:319774] Resetting plugins due to page load.
+2014-12-13 19:52:51.212 Esteam8[10281:319774] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/5AA4F586-14D0-4FA3-8090-314724E6A953/Esteam8.app/www/index.html
+2014-12-13 19:54:58.705 Esteam8[10599:320800] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/C44D2FFF-0207-4193-B85E-BCE5B9683614/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:54:58.830 Esteam8[10599:320800] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:54:58.830 Esteam8[10599:320800] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:54:58.832 Esteam8[10599:320800] Unlimited access to network resources
+2014-12-13 19:54:58.836 Esteam8[10599:320800] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:54:59.116 Esteam8[10599:320800] [CDVTimer][statusbar] 21.785975ms
+2014-12-13 19:54:59.116 Esteam8[10599:320800] [CDVTimer][TotalPluginStartup] 21.966994ms
+2014-12-13 19:54:59.193 Esteam8[10599:320800] Resetting plugins due to page load.
+2014-12-13 19:54:59.315 Esteam8[10599:320800] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/A5650FB4-103B-4C94-B9C4-48A2B150054D/Esteam8.app/www/index.html
+2014-12-13 19:55:26.966 Esteam8[10810:321665] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/30F2644A-F170-4A11-891F-8082EEE276E4/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:55:27.102 Esteam8[10810:321665] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:55:27.102 Esteam8[10810:321665] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:55:27.104 Esteam8[10810:321665] Unlimited access to network resources
+2014-12-13 19:55:27.107 Esteam8[10810:321665] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:55:27.340 Esteam8[10810:321665] [CDVTimer][statusbar] 19.482017ms
+2014-12-13 19:55:27.340 Esteam8[10810:321665] [CDVTimer][TotalPluginStartup] 19.735992ms
+2014-12-13 19:55:27.438 Esteam8[10810:321665] Resetting plugins due to page load.
+2014-12-13 19:55:27.578 Esteam8[10810:321665] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/E80D34DF-7B8E-4939-8447-D97DB378D508/Esteam8.app/www/index.html
+2014-12-13 19:56:58.219 Esteam8[11188:323422] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/772469B9-BEF2-486B-8595-C8999DABB467/Library/Cookies/Cookies.binarycookies
+2014-12-13 19:56:58.338 Esteam8[11188:323422] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 19:56:58.338 Esteam8[11188:323422] Multi-tasking -> Device: YES, App: YES
+2014-12-13 19:56:58.340 Esteam8[11188:323422] Unlimited access to network resources
+2014-12-13 19:56:58.342 Esteam8[11188:323422] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 19:56:58.581 Esteam8[11188:323422] [CDVTimer][statusbar] 34.025013ms
+2014-12-13 19:56:58.581 Esteam8[11188:323422] [CDVTimer][TotalPluginStartup] 34.214020ms
+2014-12-13 19:56:58.679 Esteam8[11188:323422] Resetting plugins due to page load.
+2014-12-13 19:56:58.807 Esteam8[11188:323422] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/7743F6AC-97B8-44C6-B551-B0167B408F89/Esteam8.app/www/index.html
+2014-12-13 20:00:09.805 Esteam8[11508:324974] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/F6580C6A-7468-4320-A6E7-A5731EFD6716/Library/Cookies/Cookies.binarycookies
+2014-12-13 20:00:09.913 Esteam8[11508:324974] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 20:00:09.914 Esteam8[11508:324974] Multi-tasking -> Device: YES, App: YES
+2014-12-13 20:00:09.915 Esteam8[11508:324974] Unlimited access to network resources
+2014-12-13 20:00:09.918 Esteam8[11508:324974] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 20:00:10.194 Esteam8[11508:324974] [CDVTimer][statusbar] 60.715973ms
+2014-12-13 20:00:10.194 Esteam8[11508:324974] [CDVTimer][TotalPluginStartup] 60.976982ms
+2014-12-13 20:00:10.323 Esteam8[11508:324974] Resetting plugins due to page load.
+2014-12-13 20:00:10.451 Esteam8[11508:324974] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/2CD1BEC6-17B1-4DFD-8E11-87E9049305B4/Esteam8.app/www/index.html
+2014-12-13 20:00:54.808 Esteam8[11815:325675] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/98DF2F48-4A66-4331-9565-66E424661F37/Library/Cookies/Cookies.binarycookies
+2014-12-13 20:00:54.967 Esteam8[11815:325675] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 20:00:54.967 Esteam8[11815:325675] Multi-tasking -> Device: YES, App: YES
+2014-12-13 20:00:54.970 Esteam8[11815:325675] Unlimited access to network resources
+2014-12-13 20:00:54.973 Esteam8[11815:325675] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 20:00:55.259 Esteam8[11815:325675] [CDVTimer][statusbar] 19.122958ms
+2014-12-13 20:00:55.259 Esteam8[11815:325675] [CDVTimer][TotalPluginStartup] 19.496024ms
+2014-12-13 20:00:55.339 Esteam8[11815:325675] Resetting plugins due to page load.
+2014-12-13 20:00:55.459 Esteam8[11815:325675] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/33CCCF7A-E92D-4621-88DD-F9A2A0138D98/Esteam8.app/www/index.html
+2014-12-13 20:02:39.438 Esteam8[12124:326608] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/5C2D52BD-C0DF-45CE-BFB8-20C498CEE385/Library/Cookies/Cookies.binarycookies
+2014-12-13 20:02:39.569 Esteam8[12124:326608] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 20:02:39.569 Esteam8[12124:326608] Multi-tasking -> Device: YES, App: YES
+2014-12-13 20:02:39.572 Esteam8[12124:326608] Unlimited access to network resources
+2014-12-13 20:02:39.575 Esteam8[12124:326608] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 20:02:39.843 Esteam8[12124:326608] [CDVTimer][statusbar] 22.376001ms
+2014-12-13 20:02:39.843 Esteam8[12124:326608] [CDVTimer][TotalPluginStartup] 22.574008ms
+2014-12-13 20:02:39.921 Esteam8[12124:326608] Resetting plugins due to page load.
+2014-12-13 20:02:40.061 Esteam8[12124:326608] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/F1239C25-325E-4E53-B9A1-441282865762/Esteam8.app/www/index.html
+2014-12-13 20:53:50.143 Esteam8[12320:329579] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/EC74F0B9-2CAD-4D69-AEA3-F3822A4F5BD2/Library/Cookies/Cookies.binarycookies
+2014-12-13 20:53:50.259 Esteam8[12320:329579] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 20:53:50.259 Esteam8[12320:329579] Multi-tasking -> Device: YES, App: YES
+2014-12-13 20:53:50.261 Esteam8[12320:329579] Unlimited access to network resources
+2014-12-13 20:53:50.265 Esteam8[12320:329579] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 20:53:50.553 Esteam8[12320:329579] [CDVTimer][statusbar] 66.839039ms
+2014-12-13 20:53:50.553 Esteam8[12320:329579] [CDVTimer][TotalPluginStartup] 67.049026ms
+2014-12-13 20:53:50.707 Esteam8[12320:329579] Resetting plugins due to page load.
+2014-12-13 20:53:50.836 Esteam8[12320:329579] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/7A76C019-CE66-495B-8A64-71FF4CA4123F/Esteam8.app/www/index.html
+2014-12-13 20:54:42.133 Esteam8[12320:329579] CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 20:54:42.134 Esteam8[12320:329579] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 21:00:33.696 Esteam8[12640:332349] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/1B48AE56-3225-4ACE-B2CC-0951BF9F3F13/Library/Cookies/Cookies.binarycookies
+2014-12-13 21:00:33.806 Esteam8[12640:332349] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-13 21:00:33.807 Esteam8[12640:332349] Multi-tasking -> Device: YES, App: YES
+2014-12-13 21:00:33.809 Esteam8[12640:332349] Unlimited access to network resources
+2014-12-13 21:00:33.812 Esteam8[12640:332349] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-13 21:00:34.098 Esteam8[12640:332349] [CDVTimer][statusbar] 68.711996ms
+2014-12-13 21:00:34.098 Esteam8[12640:332349] [CDVTimer][TotalPluginStartup] 68.904996ms
+2014-12-13 21:00:34.239 Esteam8[12640:332349] Resetting plugins due to page load.
+2014-12-13 21:00:34.388 Esteam8[12640:332349] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/8207A0F6-2A4A-458C-848C-8E9D421BE4E8/Esteam8.app/www/index.html
+2014-12-13 21:00:42.000 Esteam8[12640:332349] CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 21:00:42.000 Esteam8[12640:332349] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 21:00:45.307 Esteam8[12640:332349] CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 21:00:45.308 Esteam8[12640:332349] Failed to load webpage with error: CDVWebViewDelegate: Navigation started when state=1
+2014-12-13 21:01:16.094 Esteam8[12640:332557] Terminating since there is no system app.
+2014-12-14 20:33:28.051 Esteam8[14505:670665] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Data/Application/E8695029-8B11-470E-8BC5-8F5DBD9B63F2/Library/Cookies/Cookies.binarycookies
+2014-12-14 20:33:28.341 Esteam8[14505:670665] Apache Cordova native platform version 3.7.0 is starting.
+2014-12-14 20:33:28.341 Esteam8[14505:670665] Multi-tasking -> Device: YES, App: YES
+2014-12-14 20:33:28.358 Esteam8[14505:670665] Unlimited access to network resources
+2014-12-14 20:33:28.372 Esteam8[14505:670665] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2014-12-14 20:33:29.023 Esteam8[14505:670665] [CDVTimer][statusbar] 133.405030ms
+2014-12-14 20:33:29.023 Esteam8[14505:670665] [CDVTimer][TotalPluginStartup] 133.583963ms
+2014-12-14 20:33:29.223 Esteam8[14505:670665] Resetting plugins due to page load.
+2014-12-14 20:33:29.541 Esteam8[14505:670665] Finished load of: file:///Users/mauricio/Library/Developer/CoreSimulator/Devices/1399B24E-A1FF-44A9-AF4A-37D13D3EE951/data/Containers/Bundle/Application/6CB2F202-D704-4117-8AB8-0D9B4546B51D/Esteam8.app/www/index.html

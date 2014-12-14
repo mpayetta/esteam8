@@ -11,7 +11,7 @@ app.views.HomeView = app.Extensions.View.extend({
     },
 
     goLogin: function (event) {
-        app.router.navigate("/login", { trigger: true });
+    	app.router.navigate("/login", { trigger: true });
     },
 
     goSignup: function (event) {

@@ -1,3 +1,7 @@
+* {
+	outline: 0 !important;
+}
+
 body {
     font-family: "Oxygen";
 }
@@ -9,28 +13,43 @@ body {
   bottom: 0;
   left: 0;
   padding: 1em;
-  text-align: center;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
-  -webkit-transform: translate3d(100%, 0, 0);
-          transform: translate3d(100%, 0, 0);
 }
 
-.page.is-visible {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+header.bar.bar-nav,
+.bar.bar-tab {
+  -webkit-transform: translateZ(0);
 }
 
 a {
-    color: #D9534F;
+    color: #D94E67;
 }
 
-a.inverse {
+a.inverse, .btn-link.inverse {
     color: #F2F2F2;
 }
 
-.input-group input {
+form {
+	margin: 30px;
+}
+
+form input[type="text"] {
+	width: 90%;
+	margin-left: 5%;
+}
+
+.input-group input:not([type="checkbox"]) {
+	text-align: center;
     height: 50px;
+}
+
+.cb-centered {
+	text-align: center;
+}
+
+.bar-tab .tab-item.active {
+	color: #D94E67;
 }
 
 .btn {
@@ -41,6 +60,66 @@ a.inverse {
 	background: #CCC;
 }
 
+.btn-strong {
+	color: #f2f2f2;
+	border: 1px solid #591E23;
+	background-color: #591E23;
+}
+
+.btn-light {
+	color: #555;
+	border: 1px solid #F2F2F2;
+	background-color: #F2F2F2;
+}
+
+.btn-primary {
+	color: #f2f2f2;
+	border: 1px solid #D94E67;
+	background-color: #D94E67;
+}
+
+.btn-secondary {
+	color: #444;
+	border: 1px solid #F2D8A7;
+	background-color: #F2D8A7;
+}
+
+.centered {
+	text-align: center;
+}
+
+.big-margin {
+	margin: 50px;
+}
+
+.big-text {
+	font-size: 22px;
+}
+
+.dark {
+	color: #333;
+}
+
+.light {
+	color: #666;
+}
+
+div.big-btns {
+	margin: 30px 0px;
+}
+
+div.big-btns button {
+	margin: 10px;
+	height: 150px;
+	width: 150px;
+	text-align: center;
+}
+
+div.big-btns button i {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 40px;
+}
 div.msg {
 	width: 90%;
 	margin-left: 5%;
@@ -89,14 +168,14 @@ div.wheel.loading {
     font-size: 16px;
 }
 
-input#login-btn, input#create-acc-btn {
+input.btn-block {
     margin-top: 20px;
     margin-left: 5%;
     width: 90%;
 }
 
 .colored-bar {
-    background-color: #D9534F;
+    background-color: #D94E67;
 }
 
 .colored-bar .title{

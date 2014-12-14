@@ -1,41 +1,55 @@
 var UserService = {};
 app.services.UserService = UserService;
 
-UserService.findById = function(id, callback) {
+UserService.findById = function(id) {
+	var deferred = $.Deferred();
 	var url = app.config.dbhost + '/users/' + id;
 	$.get(url, function(data){
-		callback(data);
+		deferred.resolve(data);
 	});
+	return deferred.promise();
 }
 
-UserService.findByEmail = function(email, callback) {
+UserService.findByEmail = function(email) {
+	var deferred = $.Deferred();
 	var url = app.config.dbhost + '/users/email/' + email;
 	$.get(url, function(data){
-		callback(data);
+		deferred.resolve(data);
 	});
+	return deferred.promise();
 }
 
-UserService.findByName = function(name, callback) {
+UserService.findByName = function(name) {
+	var deferred = $.Deferred();
 	var url = app.config.dbhost + '/users/name/' + name;
 	$.get(url, function(data){
-		callback(data);
+		deferred.resolve(data);
 	});
+	return deferred.promise();
 }
 
 UserService.login = function(name, pass, callback) {
+	var deferred = $.Deferred();
 	var url = app.config.dbhost + '/login';
 	$.ajax({
 		url: url,
 		data: { name: name, pass: pass },
 		type: 'POST',
 		success: function(data) {
-			callback(data);
+			if (data.error) {
+				deferred.reject(data.error);
+			}
+			else {
+				deferred.resolve(data);
+			}
 		}
 	});
+	return deferred.promise();
 }
 
 UserService.createAccount = function(userData, callback) {
-	var url = app.config.dbhost + '/signup';
+	var url = app.config.dbhost + '/users';
+	var deferred = $.Deferred();
 	var data = {
 		fname: userData.fname,
 		lname: userData.lname,
@@ -48,9 +62,15 @@ UserService.createAccount = function(userData, callback) {
 		data: data,
 		type: 'POST',
 		success: function(data){
-			callback(data);
+			if (data.error) {
+				deferred.reject(data.error);
+			}
+			else {
+				deferred.resolve(data);
+			}
 		}
 	});
+	return deferred.promise();
 }
 
 
