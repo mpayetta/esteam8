@@ -1,0 +1,26 @@
+<header class="bar bar-nav colored-bar">
+    <a href="#" id="go-back" class="pull-left inverse">
+        <span class="icon icon-left"></span>
+    </a>
+    <a href="#" class="inverse icon icon-plus pull-right" id="add-users"></a>
+    <h1 class="title"><%= team.name %></h1>
+</header>
+
+
+<div class="content">	
+	
+	<div id="users-list"></div>
+	
+</div>
+
+
+<div id="tabs"></div>
+
+<script type="text/javascript">
+$(function(){
+	$('#tabs').load('tpl/TabBar.html', function(){
+		$('.tabs-bar a').removeClass('active');
+		$('.tabs-bar a.my-teams').addClass('active');
+	});
+});
+</script>

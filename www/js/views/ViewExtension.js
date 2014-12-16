@@ -11,7 +11,7 @@ app.Extensions.View = Backbone.View.extend( {
 		if (options.page === true) {
 			this.$el.addClass('page');
 		}
-
+		
 		return this;
 
 	},

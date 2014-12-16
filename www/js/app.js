@@ -5,6 +5,7 @@ var app = {
 	utils : {},
 	services : {},
 	config : {},
+	session: {},
 	Extensions: {}
 };
 
@@ -25,8 +26,18 @@ $(document).on("ready", function() {
 	
 	app.router = new app.routers.AppRouter();
 	app.utils.templates.load(
-		[ "LoginView", "SignupView", "HomeView", "MyTeamsView", "CreateTeamView", "TeamListItemView", "TeamView",
-		  "UserListItemView"], 
+		[ 
+		  "LoginView", 
+		  "SignupView", 
+		  "HomeView", 
+		
+		  "teams/MyTeamsView", 
+		  "teams/CreateTeamView", 
+		  "teams/TeamListItemView", 
+		  "teams/TeamView",
+		  
+		  "users/UserListItemView"
+		], 
 		function() {
 			app.router = new app.routers.AppRouter();
 			app.instance = new app.views.App();

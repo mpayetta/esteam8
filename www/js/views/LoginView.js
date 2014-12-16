@@ -36,7 +36,8 @@ app.views.LoginView = app.Extensions.View.extend({
 		
 		loginPromise.done(function(data){
 			view.toggleLoading();
-			app.router.navigate("/welcome/" + data._id, { trigger: true });
+			app.session.user = data;
+			app.router.navigate("/myTeams", { trigger: true });
 		});
 		
 		loginPromise.fail(function(error){

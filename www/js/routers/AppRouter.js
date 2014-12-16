@@ -4,8 +4,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         "":         			"home",
         "login":    			"login",
         "signup":   			"signup",
-        "welcome/:userId":		"welcome",
-        "createTeam/:userId":	"createTeam",
+        "myTeams":		"myTeams",
+        "createTeam":	"createTeam",
         "showTeam/:teamId":		"showTeam"
     },
 
@@ -28,8 +28,8 @@ app.routers.AppRouter = Backbone.Router.extend({
         app.instance.goTo(signupView);
     },
     
-    welcome: function(userId) {
-    	var user = new app.models.User({id: userId});
+    myTeams: function() {
+    	var user = new app.models.User({id: app.session.user._id});
     	user.fetch({
     		success: function() {
     			var myTeamsView = new app.views.MyTeamsView({ user: user });
@@ -38,8 +38,8 @@ app.routers.AppRouter = Backbone.Router.extend({
     	});
     },
     
-    createTeam: function(userId) {
-    	var user = new app.models.User({id: userId});
+    createTeam: function() {
+    	var user = new app.models.User({id: app.session.user._id});
     	user.fetch({
     		success: function() {
     			var createTeamView = new app.views.CreateTeamView({ user: user });
