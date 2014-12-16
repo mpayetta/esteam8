@@ -35,6 +35,7 @@ $(document).on("ready", function() {
 		  "teams/CreateTeamView", 
 		  "teams/TeamListItemView", 
 		  "teams/TeamView",
+		  "teams/AddUsersView",
 		  
 		  "users/UserListItemView"
 		], 

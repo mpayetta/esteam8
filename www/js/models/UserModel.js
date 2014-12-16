@@ -16,6 +16,13 @@ app.models.UserCollection = Backbone.Collection.extend( {
 
 	url : app.config.dbhost + "/users",
 
-	model : app.models.User
+	model : app.models.User,
+	
+	byName: function(name) {
+		filtered = this.filter(function(user) {
+			return user.get("name").indexOf(name) > -1;
+	    });
+	    return new UserCollection(filtered);
+	}
 
 });

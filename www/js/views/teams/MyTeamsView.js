@@ -47,7 +47,7 @@ app.views.MyTeamsView = app.Extensions.View.extend( {
 	goToTeam: function(event) {
     	event.preventDefault();
 		var id = $(event.currentTarget).data("id");
-		app.router.navigate("/showTeam/" + id, {
+		app.router.navigate("/team/" + id, {
 			trigger : true
 		});
 	}

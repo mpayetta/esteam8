@@ -28,15 +28,10 @@ usersRoute.post(function(req, res) {
 // Get all users
 usersRoute.get(function(req, res) {
 	if (req.query.ids) {
-		User.find( { '_id': { $in: req.query.ids } }, 
-			function(err, users){
-				if (err) {
-					res.send(err);
-				}
-				console.log(users);
-				res.json(users);
-			}
-		);
+		findByIds(req.query.ids, req, res);
+	}
+	else if (req.query.name) {
+		findByName(req.query.name, req, res);
 	}
 	else {
 		User.find(function(err, users) {
@@ -48,6 +43,30 @@ usersRoute.get(function(req, res) {
 		});
 	}
 });
+
+var findByIds = function(ids, req, res) {
+	User.find( { '_id': { $in: req.query.ids } }, 
+		function(err, users){
+			if (err) {
+				res.send(err);
+			}
+			console.log(users);
+			res.json(users);
+		}
+	);
+};
+
+var findByName = function(name, req, res) {
+	User.find( { 'name': new RegExp(name, 'i') }, 
+		function(err, users){
+			if (err) {
+				res.send(err);
+			}
+			console.log(users);
+			res.json(users);
+		}
+	);
+}
 
 
 // Route for single user operations

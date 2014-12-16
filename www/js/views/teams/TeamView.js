@@ -22,7 +22,7 @@ app.views.TeamView = app.Extensions.View.extend( {
 	},
 	
 	events: {
-		"click #add-team-member":  	"addMember",
+		"click #add-users":  	"addUsers",
 		"click #go-back":       	"goBack"
 	},
 
@@ -35,6 +35,10 @@ app.views.TeamView = app.Extensions.View.extend( {
 	
 	goBack: function() {
 		app.router.navigate("/myTeams", {trigger: true});
+	},
+	
+	addUsers: function() {
+		app.router.navigate("/team/" + this.model.id + "/addUsers", {trigger: true});
 	}
 
 });
