@@ -2,7 +2,9 @@
     <a href="#" id="go-back" class="pull-left inverse">
         <span class="icon icon-left"></span>
     </a>
-    <a href="#" class="inverse icon icon-plus pull-right" id="add-users"></a>
+    <% if (team.owner === currentUser._id) { %>   
+    	<a href="#" class="inverse icon icon-compose pull-right" id="add-users"></a>
+    <% } %>
     <h1 class="title"><%= team.name %></h1>
 </header>
 

@@ -5,7 +5,8 @@ app.views.TeamView = app.Extensions.View.extend( {
 		
 		this.users = new app.models.UserCollection();
 		this.usersView = new app.views.UserListView({
-			collection: this.users
+			collection: this.users,
+			listTitle: "Team members"
 		});
 		
 
@@ -27,7 +28,7 @@ app.views.TeamView = app.Extensions.View.extend( {
 	},
 
 	render : function(eventName) {
-		this.$el.html(this.template( { team : this.model.toJSON() }));
+		this.$el.html(this.template( { team : this.model.toJSON(), currentUser: app.session.user }));
 		this.$('#users-list').html(this.usersView.render().el);
 		this.$('#users-list a[data-id="' + this.model.get('owner') + '"]').append('<span class="badge badge-primary">owner</span>');
 		return this;

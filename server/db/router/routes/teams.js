@@ -73,7 +73,7 @@ teamRoute.put(function(req, res) {
 		team.owner = req.body.owner;
 		team.members = req.body.members;
 
-		Team.save(function(err) {
+		team.save(function(err) {
 			if (err) {
 				res.send(err);
 			}	

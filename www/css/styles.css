@@ -30,11 +30,22 @@ a.inverse, .btn-link.inverse {
     color: #F2F2F2;
 }
 
-form {
+a.navigate-right.nav-plus:after {
+	right: 15px;
+	content: '\e817';
+}
+
+a.navigate-right.nav-remove:after {
+	right: 15px;
+	content: '\e811';
+	color: #D94E67;
+}
+
+form:not(.input-group) {
 	margin: 30px;
 }
 
-form input[type="text"] {
+form:not(.input-group) input[type="text"] {
 	width: 90%;
 	margin-left: 5%;
 }
