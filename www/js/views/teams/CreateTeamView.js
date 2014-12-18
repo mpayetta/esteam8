@@ -22,7 +22,7 @@ app.views.CreateTeamView = app.Extensions.View.extend({
 		else {
 			$('#create-team-btn').attr('disabled', true);
 		}
-	},
+	}, 
 
 	createTeam: function (event) {
 		var name = $('input#name').val(),
@@ -45,7 +45,7 @@ app.views.CreateTeamView = app.Extensions.View.extend({
 				var data = { teams: teams };
 				user.save(data, {
 					success: function (userModel) {
-						app.router.navigate("/showTeam/" + teamModel.id, { trigger: true });
+						app.router.navigate("/team/" + teamModel.id, { trigger: true });
 					}
 				});
 			}

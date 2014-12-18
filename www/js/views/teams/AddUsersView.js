@@ -83,13 +83,21 @@ app.views.AddUsersView = app.Extensions.View.extend({
 	},
 	
 	addUsers: function() {
+		var theTeam = this.team;
 		var teamMembers = this.team.get('members');
 		this.usersToAdd.each(function(model, index){
-			if (_.indexOf(model.id, teamMembers) === -1) {
-				teamMembers.push(model.id);
+			var theUser = model;
+			var userTeams = theUser.get('teams');
+			userTeams.push(theTeam.id);
+			// save the user with the new team in his teams list
+			theUser.save({ teams : userTeams });
+			// if the team does not have the user already in the members
+			// list, then add the user to the team
+			if (_.indexOf(theUser.id, teamMembers) === -1) {
+				teamMembers.push(theUser.id);
 			}
 		});
-		var theTeam = this.team;
+		
 		this.team.save({members: teamMembers}, {
 			success: function() {
 				app.router.navigate("/team/" + theTeam.id, {trigger: true});

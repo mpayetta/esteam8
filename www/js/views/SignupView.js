@@ -39,34 +39,66 @@ app.views.SignupView = app.Extensions.View.extend({
 		$('div.msg').html('');
 		this.toggleLoading();
 		
-		var namePromise = userService.findByName(userData.name);
-		namePromise.done(function(data) {
-			if (data) {
-				view.toggleLoading();
-				$('div.msg').html('The username is already being used');
-			}
-			else {
-				var emailPromise = userService.findByEmail(userData.email);
-				emailPromise.done(function(data){
-					if (data) {
-						view.toggleLoading();
-						$('div.msg').html('The email is already being used');
-					}
-					else {
-						var createAccPromise = userService.createAccount(userData);
-						createAccPromise.done(function(data){
-							view.toggleLoading();
-							view.goToLogin();
-						});
-						
-						createAccPromise.fail(function(error) {
-							view.toggleLoading();
-							$('div.msg').html('There was an error while creating your account, please try again');
-						});
-					}
-				})
+		var user = new app.models.User();
+		user.fetchByName(userData.name, {
+			success: function(data) {
+				if (data.id) {
+					view.toggleLoading();
+					$('div.msg').html('The username is already being used');
+				}
+				else {
+					user.fetchByEmail(userData.email, {
+						success: function(data) {
+							if (data.id) {
+								view.toggleLoading();
+								$('div.msg').html('The email is already being used');
+							}
+							else {
+								user.save(userData, {
+									success: function(data) {
+										view.toggleLoading();
+										view.goToLogin();
+									},
+									error: function() {
+										view.toggleLoading();
+										$('div.msg').html('There was an error while creating your account, please try again');
+									}
+								});
+							}
+						}
+					});
+				}
 			}
 		});
+		
+//		var namePromise = userService.findByName(userData.name);
+//		namePromise.done(function(data) {
+//			if (data) {
+//				view.toggleLoading();
+//				$('div.msg').html('The username is already being used');
+//			}
+//			else {
+//				var emailPromise = userService.findByEmail(userData.email);
+//				emailPromise.done(function(data){
+//					if (data) {
+//						view.toggleLoading();
+//						$('div.msg').html('The email is already being used');
+//					}
+//					else {
+//						var createAccPromise = userService.createAccount(userData);
+//						createAccPromise.done(function(data){
+//							view.toggleLoading();
+//							view.goToLogin();
+//						});
+//						
+//						createAccPromise.fail(function(error) {
+//							view.toggleLoading();
+//							$('div.msg').html('There was an error while creating your account, please try again');
+//						});
+//					}
+//				})
+//			}
+//		});
 	},
 
 	goToLogin: function (event) {

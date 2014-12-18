@@ -84,11 +84,13 @@ userRoute.get(function(req, res) {
 
 // Update user data
 userRoute.put(function(req, res) {
+	console.log(req.params);
 	User.findById(req.params.user_id, function(err, user) {
 		if (err) {
 			res.send(err);
 		}
 		console.log('updating user');
+		console.log(user);
 		user.fname = req.body.fname;
 		user.lname = req.body.lname;
 		user.teams = req.body.teams;

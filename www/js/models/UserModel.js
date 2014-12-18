@@ -2,11 +2,30 @@ app.models.User = Backbone.Model.extend( {
 
 	url : function() {
 		var url = app.config.dbhost + "/users";
-		if (this.get('id')) {
-			url += "/" + this.get('id');
+		var id = this.id || this.get('id');
+		if (id) {
+			url += "/" + id;
 		}
 		return url;
 	},
+	
+	fetchByName: function (username, options) {
+        options = options || {};
+        if (options.url === undefined) {
+            options.url = app.config.dbhost + "/users/name/" + username;
+        }
+
+        return Backbone.Model.prototype.fetch.call(this, options);
+    },
+    
+    fetchByEmail: function (email, options) {
+        options = options || {};
+        if (options.url === undefined) {
+            options.url = app.config.dbhost + "/users/email/" + email;
+        }
+
+        return Backbone.Model.prototype.fetch.call(this, options);
+    },
 
 	idAttribute : "_id"
 
