@@ -3,44 +3,52 @@ app.views.AddUsersView = app.Extensions.View.extend({
 	initialize: function (options) {
 		this.team = options.team;
 		this.users = new app.models.UserCollection();
-		this.usersToAdd = new app.models.UserCollection();
+		this.teamMembers = new app.models.UserCollection();
 		this.usersView = new app.views.UserListView({
 			collection: this.users,
 			navType: "nav-plus",
 			cssClass: "to-add",
 			listTitle: "Search result"
 		});
-		this.usersToAddView = new app.views.UserListView({
-			collection: this.usersToAdd,
+		this.teamMembersView = new app.views.UserListView({
+			collection: this.teamMembers,
 			navType: "nav-remove",
 			cssClass: "to-remove",
-			listTitle: "Users to add"
+			listTitle: "Team Members"
 		});
 		
 		this.listenTo(this.users, 'change reset add remove', this.renderUsersList);
-		this.listenTo(this.usersToAdd, 'change reset add remove', this.renderUsersToAddList);
+		this.listenTo(this.teamMembers, 'change reset add remove', this.renderTeamMembersList);
 	},
 
 	render: function () {
 		this.$el.html(this.template({ }));
 		this.$('#search-list').html(this.usersView.render().el);
 		
+		this.teamMembers.fetch( {
+			reset : true,
+			data : {
+				ids : this.team.get('members')
+			}
+		});
+		
 		return this;
 	},
 	
 	renderUsersList: function() {
+		this.users.remove(this.teamMembers.models);
 		this.$('#search-list').html(this.usersView.render().el);
 	},
 	
-	renderUsersToAddList: function() {
-		this.$('#added-users').html(this.usersToAddView.render().el);
+	renderTeamMembersList: function() {
+		this.$('#added-users').html(this.teamMembersView.render().el);
 	},
 
 	events: {
 		"keyup input#name":		"searchUsers",
 		"click a.to-add":		"addUserToList",
 		"click a.to-remove": 	"removeUserFromList",
-		"click #add-users-btn": "addUsers",
+		"click #add-users-btn": "saveTeam",
 		"click #go-back":       "goBack"
 	},
 	
@@ -69,36 +77,56 @@ app.views.AddUsersView = app.Extensions.View.extend({
 	addUserToList: function(event) {
 		event.preventDefault();
 		var id = $(event.currentTarget).data("id");
-		if (this.usersToAdd.get(id)) {
+		if (this.teamMembers.get(id)) {
 			return;
 		}		
 		var userToAdd = this.users.get(id);
-		this.usersToAdd.add(userToAdd);
+		this.users.remove(id);
+		this.teamMembers.add(userToAdd);
 	},
 	
 	removeUserFromList: function(event) {
 		event.preventDefault();
 		var id = $(event.currentTarget).data("id");
-		this.usersToAdd.remove(id);
+		this.users.add(this.teamMembers.get(id));
+		this.teamMembers.remove(id);
 	},
 	
-	addUsers: function() {
+	saveTeam: function() {
 		var theTeam = this.team;
-		var teamMembers = this.team.get('members');
-		this.usersToAdd.each(function(model, index){
-			var theUser = model;
-			var userTeams = theUser.get('teams');
-			userTeams.push(theTeam.id);
-			// save the user with the new team in his teams list
-			theUser.save({ teams : userTeams });
-			// if the team does not have the user already in the members
-			// list, then add the user to the team
-			if (_.indexOf(theUser.id, teamMembers) === -1) {
-				teamMembers.push(theUser.id);
-			}
+		var oldMembers = this.team.get('members');
+		var newMembers = this.teamMembers;
+		var newMembersIds = [];
+		newMembers.each(function(user, index){
+			newMembersIds.push(user.id);
+			var userTeams = user.get('teams');
+			
+			// if new user wasn't in old team members before, add team to user teams
+			if (! _.contains(oldMembers, user.id)) {
+				userTeams.push(theTeam.id);
+				// save the user with the new teams list
+				user.save({ teams : userTeams });
+			} 
 		});
 		
-		this.team.save({members: teamMembers}, {
+		_.each(oldMembers, function(userId, index){
+			var user = new app.models.User({ id: userId });
+			// if old member is not in new list, then remove team from user teams
+			if (!newMembers.get(userId)) {
+				user.fetch({
+					success: function(user) {
+						var userTeams = user.get('teams');
+						userTeams = _.without(userTeams, theTeam.id);
+						user.save({ teams : userTeams });
+					}
+				});
+			}
+			
+		});
+		
+		
+		
+		this.team.save({members: newMembersIds}, {
 			success: function() {
 				app.router.navigate("/team/" + theTeam.id, {trigger: true});
 			}

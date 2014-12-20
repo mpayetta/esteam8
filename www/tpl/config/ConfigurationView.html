@@ -1,0 +1,24 @@
+<header class="bar bar-nav colored-bar">
+    <h1 class="title">Configuration</h1>
+</header>
+
+<div class="content">
+	<ul class="table-view no-margin">
+  		<li class="table-view-cell">
+    		<a href="#" id="logout-btn" class="navigate-right nav-logout">
+      			Logout
+    		</a>
+		  </li>
+	</ul>
+</div>
+
+<div id="tabs"></div>
+
+<script type="text/javascript">
+$(function(){
+	$('#tabs').load('tpl/TabBar.html', function(){
+		$('.tabs-bar a').removeClass('active');
+		$('.tabs-bar a.my-settings').addClass('active');
+	});
+});
+</script>

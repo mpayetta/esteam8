@@ -28,7 +28,7 @@ app.views.TeamView = app.Extensions.View.extend( {
 	},
 
 	render : function(eventName) {
-		this.$el.html(this.template( { team : this.model.toJSON(), currentUser: app.session.user }));
+		this.$el.html(this.template( { team : this.model.toJSON(), currentUser: app.session.getSessionData() }));
 		this.$('#users-list').html(this.usersView.render().el);
 		this.$('#users-list a[data-id="' + this.model.get('owner') + '"]').append('<span class="badge badge-primary">owner</span>');
 		return this;
@@ -38,7 +38,8 @@ app.views.TeamView = app.Extensions.View.extend( {
 		app.router.navigate("/myTeams", {trigger: true});
 	},
 	
-	addUsers: function() {
+	addUsers: function(event) {
+		event.preventDefault();
 		app.router.navigate("/team/" + this.model.id + "/addUsers", {trigger: true});
 	}
 

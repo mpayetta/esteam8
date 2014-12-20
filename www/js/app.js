@@ -1,3 +1,11 @@
+Backbone.View.prototype.close = function () {
+    if (this.beforeClose) {
+        this.beforeClose();
+    }
+    this.remove();
+    this.unbind();
+};
+
 var app = {
 	views : {},
 	models : {},
@@ -9,27 +17,22 @@ var app = {
 	Extensions: {}
 };
 
-document.addEventListener("deviceready", onDeviceReady, false);
 var onDeviceReady = function () {
 	FastClick.attach(document.body);
 }
 
-Backbone.View.prototype.close = function () {
-    if (this.beforeClose) {
-        this.beforeClose();
-    }
-    this.remove();
-    this.unbind();
-};
+document.addEventListener("deviceready", onDeviceReady, false);
 
 $(document).on("ready", function() {
 	
-	app.router = new app.routers.AppRouter();
+	app.session = new app.models.Session();
 	app.utils.templates.load(
 		[ 
 		  "LoginView", 
 		  "SignupView", 
 		  "HomeView", 
+		  
+		  "config/ConfigurationView",
 		
 		  "teams/MyTeamsView", 
 		  "teams/CreateTeamView", 
@@ -45,4 +48,5 @@ $(document).on("ready", function() {
 			Backbone.history.start();
 		}
 	);
+	
 });

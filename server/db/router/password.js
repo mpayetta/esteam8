@@ -30,5 +30,6 @@ var validatePassword = function(plainPass, hashedPass, callback) {
 	callback(null, hashedPass === validHash);
 }
 
+exports.generateSalt = generateSalt;
 exports.saltAndHash = saltAndHash;
 exports.validatePassword = validatePassword;

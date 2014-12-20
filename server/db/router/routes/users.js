@@ -15,6 +15,7 @@ usersRoute.post(function(req, res) {
 	user.lname = req.body.lname;
 	user.email = req.body.email;
 	user.pass = password.saltAndHash(req.body.pass);
+	user.authToken = password.generateSalt();
 	user.teams = [];
 
 	user.save(function(err) {
@@ -132,7 +133,7 @@ var byEmailRoute = router.route('/email/:user_email');
 
 // Get user by email
 byEmailRoute.get(function(req, res) {
-	User.findOne({ name: req.params.user_email }, function(err, user) {
+	User.findOne({ email: req.params.user_email }, function(err, user) {
 		if (err) {
 			res.send(err);
 		}

@@ -4,6 +4,7 @@ app.routers.AppRouter = Backbone.Router.extend({
         "":         			 "home",
         "login":    			 "login",
         "signup":   			 "signup",
+        "config":				 "config",
         "myTeams":				 "myTeams",
         "createTeam":			 "createTeam",
         "team/:teamId":			 "showTeam",
@@ -12,6 +13,20 @@ app.routers.AppRouter = Backbone.Router.extend({
 
     initialize: function () {
     	
+    },
+    
+    before: function(route, params) {
+    	if (route !== "login" && route !== "signup" && route !== "") {
+    		if (!app.session.getSessionData()) {
+    			var homeView = new app.views.HomeView();
+    			app.instance.goTo(homeView);
+    			return false;
+    		}
+    	}
+    },
+    
+    getCurrentUserId: function() {
+    	return app.session.getSessionData().userId;
     },
 	
 	home: function () {
@@ -29,8 +44,13 @@ app.routers.AppRouter = Backbone.Router.extend({
         app.instance.goTo(signupView);
     },
     
+    config: function() {
+    	var configView = new app.views.ConfigurationView();
+        app.instance.goTo(configView);
+    },
+    
     myTeams: function() {
-    	var user = new app.models.User({id: app.session.user._id});
+    	var user = new app.models.User({id: this.getCurrentUserId() });
     	user.fetch({
     		success: function() {
     			var myTeamsView = new app.views.MyTeamsView({ user: user });
@@ -40,7 +60,7 @@ app.routers.AppRouter = Backbone.Router.extend({
     },
     
     createTeam: function() {
-    	var user = new app.models.User({id: app.session.user._id});
+    	var user = new app.models.User({id: this.getCurrentUserId() });
     	user.fetch({
     		success: function() {
     			var createTeamView = new app.views.CreateTeamView({ user: user });

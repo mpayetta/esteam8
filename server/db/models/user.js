@@ -8,6 +8,7 @@ var UserSchema = new mongoose.Schema({
   lname: String,
   email: String,
   pass: String,
+  authToken: String,
   teams: [  ]
 });
 

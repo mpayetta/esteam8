@@ -10,7 +10,7 @@ app.views.LoginView = app.Extensions.View.extend({
 
 	events: {
 		"click #login-btn":     "login",
-		"click #signup-btn":    "signup",
+		"click #go-signup":    "signup",
 		"click #go-home":       "home"
 	},
 	
@@ -36,7 +36,7 @@ app.views.LoginView = app.Extensions.View.extend({
 		
 		loginPromise.done(function(data){
 			view.toggleLoading();
-			app.session.user = data;
+			app.session.saveSessionData(data);
 			app.router.navigate("/myTeams", { trigger: true });
 		});
 		
